@@ -1,3 +1,26 @@
-<p>
-  planta works!
-</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Nombre Común</th>
+          <th class="h4">Tipo</th>
+          <th class="h4">Clima</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of plantas">
+          <td>
+            <dd>{{c.nombre_comun}}</dd>
+          </td>
+          <td>
+            <dd>{{c.tipo}}</dd>
+          </td>
+          <td>
+            <dd>{{c.clima}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
