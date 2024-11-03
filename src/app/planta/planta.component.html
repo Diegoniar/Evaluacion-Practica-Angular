@@ -1,3 +1,9 @@
+<diV>
+  <h1>Vivero El Otoño</h1>
+</diV>
+<div>
+ <img src="imagenes/fondo.jpg" class="img-fluid"/>
+</div>
 <div class="container-fluid">
   <div class="col-6">
     <table class="table">
@@ -9,15 +15,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let c of plantas">
+        <tr *ngFor="let p of plantas">
           <td>
-            <dd>{{c.nombre_comun}}</dd>
+            <dd>{{p.nombre_comun}}</dd>
           </td>
           <td>
-            <dd>{{c.tipo}}</dd>
+            <dd>{{p.tipo}}</dd>
           </td>
           <td>
-            <dd>{{c.clima}}</dd>
+            <dd>{{p.clima}}</dd>
           </td>
       </tr>
       </tbody>
