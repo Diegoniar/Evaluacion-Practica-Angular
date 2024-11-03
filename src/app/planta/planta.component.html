@@ -1,14 +1,16 @@
-<diV>
-  <h1>Vivero El Otoño</h1>
-</diV>
 <div>
- <img src="imagenes/fondo.jpg" class="img-fluid"/>
+  <h1 class="titulo">Vivero El Otoño</h1>
+  <img src="imagenes/fondo.jpg" class="img-fluid"/>
+</div>
+<div>
+  
 </div>
 <div class="container-fluid">
   <div class="col-6">
     <table class="table">
       <thead>
-        <tr>
+        <tr class="table-dark col-sm-2 col-md-3 col-lg-6">
+          <th class="h4">#</th>
           <th class="h4">Nombre Común</th>
           <th class="h4">Tipo</th>
           <th class="h4">Clima</th>
@@ -16,6 +18,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let p of plantas">
+          <td>
+            <dd>{{p.id}}</dd>
+          </td>
           <td>
             <dd>{{p.nombre_comun}}</dd>
           </td>
@@ -28,5 +33,12 @@
       </tr>
       </tbody>
     </table>
+    <h5 class="Final">Total plantas de interior: {{interior}}</h5>
+    <h5 class="Final">Total plantas de exterior: {{exterior}}</h5>
   </div>
 </div>
+<footer class="footer">
+  <div class="container">
+    <p>Contact us: + 57 3506949400 - viveroelotonio.com - viveroelotonio</p>
+  </div>
+</footer>

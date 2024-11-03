@@ -11,6 +11,9 @@ import { PlantaService } from './planta.service';
 
 export class PlantaComponent implements OnInit {
   plantas: any;
+  interior: number = 0;
+  exterior: number = 0;
+  i: number = 0;
   constructor(private plantaService: PlantaService) { }
 
   getPlantasList(): Array<Planta>{
@@ -28,6 +31,21 @@ export class PlantaComponent implements OnInit {
       next: (plantas: any) =>{
         this.plantas = plantas
         console.log (this.plantas)
+        if (Array.isArray(this.plantas)){
+          let tipos = this.plantas.map(elemento => elemento.tipo);
+          console.log(tipos);
+          for(let i=0;i<tipos.length;i++){
+            if(tipos[i] === 'Exterior'){
+              this.exterior = this.exterior + 1
+            }
+            else{
+              this.interior = this.interior + 1
+            }
+          }
+        }
+        else{
+          console.log("No es array");
+        }               
       },
       error: (err: any) =>{
         console.error(err)
@@ -36,6 +54,10 @@ export class PlantaComponent implements OnInit {
         console.log('completado')
       }
     });
+
+    
+
+    
   }
 
 }
